@@ -13,6 +13,11 @@ export default function Todolist() {
     }
   }
 
+  function handleDeleteTask(indexToDelete) {
+    const updatedTasks = tasks.filter((_, index) => index !== indexToDelete);
+    setTasks(updatedTasks);
+  }
+
   return (
     <div className="todo-container">
       <h2>To Do List</h2>
@@ -28,7 +33,11 @@ export default function Todolist() {
 
       <ul className="todo-list">
         {tasks.map((task, index) => (
-          <Todoitem key={index} text={task} />
+          <Todoitem
+            key={index}
+            text={task}
+            onDelete={() => handleDeleteTask(index)}
+          />
         ))}
       </ul>
     </div>
