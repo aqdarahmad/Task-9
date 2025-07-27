@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Greeting from "./Components/Greeting/Greeting";
+import Buttonc from "./Components/Button/Buttonc";
+import Cardc from "./Components/Card/Cardc";
+import Post from "./Components/Post/Post";
+import postsData from './data/posts.json';
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
+export default function App(){
+  function Hi(){
+    alert("Hi");
+  }
+  return(
+    <div >
+    <Greeting name="Aqdar"/>
+    <Buttonc text="click me" onClick={Hi}/>
+    <Cardc 
+  title="Weather App" 
+  description="Check the current weather and forecast for your location." 
+/>
+
+<Cardc 
+  title="Flight Booking App" 
+  description="Easily search and book your flights online." 
+/>
+
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+  {postsData.map((post) => (
+    <Post key={post.id} title={post.title} body={post.body} />
+  ))}
+</div>
 
-export default App
+      
+    </div>
+  );
+}

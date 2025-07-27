@@ -1,0 +1,10 @@
+.greeting-container {
+  margin-top: 0; 
+  text-align: left;
+  padding: 10px;
+}
+
+.greeting-container h4 {
+    color: #333;
+    font-size: 18px;
+}

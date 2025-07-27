@@ -1,0 +1,36 @@
+.post {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px auto;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post .title {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.post .body {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.post button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post button:hover {
+  background-color: #45a049;
+}
